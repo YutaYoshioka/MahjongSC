@@ -1,0 +1,14 @@
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\bin\Debug\MahjongSC_for_Windows.exe.config
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\bin\Debug\MahjongSC_for_Windows.exe
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\bin\Debug\MahjongSC_for_Windows.pdb
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.csprojAssemblyReference.cache
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MainWindow.g.cs
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\App.g.cs
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows_MarkupCompile.cache
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows_MarkupCompile.lref
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MainWindow.baml
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.g.resources
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.Properties.Resources.resources
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.csproj.GenerateResource.cache
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.exe
+C:\GitRepos\MahjongSC\Windows\MahjongSC_for_Windows\MahjongSC_for_Windows\obj\Debug\MahjongSC_for_Windows.pdb

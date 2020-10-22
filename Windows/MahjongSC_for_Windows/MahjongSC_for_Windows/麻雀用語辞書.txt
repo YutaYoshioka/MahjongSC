@@ -1,0 +1,18 @@
+﻿参考: http://crescent.s255.xrea.com/cabinet/others/mahjong/
+
+麻雀: Mahjong
+翻: Doubles
+符: Points
+満貫,跳満,倍満,三倍満,役満とか(?): Slum
+字牌: HonorsTile
+
+明刻: MeldedTriplets
+暗刻: ConcealedTriplet
+明槓: MeldedFours
+暗槓: ConcealedFours
+
+
+以下オリジナル
+
+中張牌: Tiles28
+幺九字牌: Tiles19h
