@@ -1,10 +1,25 @@
 ﻿参考: http://crescent.s255.xrea.com/cabinet/others/mahjong/
 
 麻雀: Mahjong
+親: Leader
+子: NonLeader
 翻: Doubles
 符: Points
 満貫,跳満,倍満,三倍満,役満とか(?): Slum
 字牌: HonorsTile
+
+平和: AllSequenceHand
+七対子: SevenPairs
+
+和了: Win
+
+ツモ: Pick
+ロン: Duck
+門前: ConcealedHand
+
+雀頭: Head
+
+
 
 明刻: MeldedTriplets
 暗刻: ConcealedTriplet
@@ -16,3 +31,9 @@
 
 中張牌: Tiles28
 幺九字牌: Tiles19h
+
+連風牌: DoubleWindTile
+
+両面待ち; Wait2Gates
+
+

@@ -8,35 +8,23 @@
         Title="MahjongSC for Windows" Height="720" Width="1280"
 		Icon="/MahjongSC_for_Windows;component/Resources/RedDragon.ico">
 	<Grid>
-		<Label Content="翻数" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="120,12,0,0"/>
-
-		<Label Name="DoublesNum" Content="4翻" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="214,12,0,0" Width="87"/>
-		<Button Content="+1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="306,12,0,0" Height="58" FontSize="30"/>
-		<Button Content="-1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="376,12,0,0" Height="58" FontSize="30"/>
-
-		<Button Content="親" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="45,12,0,0" Height="58" FontSize="30"/>
-
-		<Button Content="平和" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="206,107,0,0" FontSize="36"/>
-		<Button Content="七対子" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="331,107,0,0" FontSize="36"/>
+		<Button x:Name="IsLeader" Content="親" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="137,12,0,0" Height="58" FontSize="30" Click="IsLeader_Click" />
+		<Button x:Name="IsThreePlayers" Content="三人" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="30,12,0,0" Height="58" FontSize="30" Click="IsThreePlayers_Click"/>
 
 
+		<Label Content="翻数" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="207,12,0,0"/>
+
+		<Label Name="DoublesNum" Content="0翻" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="301,12,0,0" Width="87" MouseDown="DoublesNum_MouseDown"/>
+		<Button x:Name="DoublesPlus" Content="+1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="393,12,0,0" Height="58" FontSize="30" Click="DoublesPlus_Click"/>
+		<Button x:Name="DoublesMinus" Content="-1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="463,12,0,0" Height="58" FontSize="30" Click="DoublesMinus_Click"/>
 
 
-		<Label Name="ResultPoint" Content="8000点" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,594,0,0" FontSize="60"/>
-		<Label Name="SlumDisplay" Content="満貫！" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="56" Margin="361,542,0,0" Width="181" Foreground="Red" RenderTransformOrigin="0.5,0.5">
-			<Label.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-14.534"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Label.RenderTransform>
-		</Label>
+		<Button x:Name="IsAllSequenceHand" Content="平和" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="206,107,0,0" FontSize="36" Click="IsAllSequenceHand_Click"/>
+		<Button x:Name="IsSevenPairs" Content="七対子" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="331,107,0,0" FontSize="36" Click="IsSevenPairs_Click"/>
 
 		<Label Content="和了" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="30,188,0,0"/>
-		<Button Content="ツモ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="120,191,0,0" FontSize="36"/>
-		<Button Content="門前ロン" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="257,191,0,0" FontSize="36" Background="Gray"/>
+		<Button x:Name="Win_IsPick" Content="ツモ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="120,191,0,0" FontSize="36" Click="Win_IsPick_Click"/>
+		<Button x:Name="Win_IsConcealedHandDuck" Content="門前ロン" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Margin="257,191,0,0" FontSize="36" Background="LightGray" Click="Win_IsConcealedHandDuck_Click"/>
 
 
 		<Label Content="中張牌" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="66,326,0,0"/>
@@ -47,30 +35,47 @@
 		<Label Content="暗槓" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="463,269,0,0"/>
 
 
-		<Label x:Name="Tiles28MT" Content="2組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="202,326,0,0" Width="82"/>
-		<Label x:Name="Tiles28CT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="289,326,0,0" Width="82"/>
-		<Label x:Name="Tiles28MF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="376,326,0,0" Width="82"/>
-		<Label x:Name="Tiles28CF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="463,326,0,0" Width="82"/>
+		<Label x:Name="Tiles28MT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="202,326,0,0" Width="82" MouseDown="Tiles28MT_MouseDown"/>
+		<Label x:Name="Tiles28CT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="289,326,0,0" Width="82" MouseDown="Tiles28CT_MouseDown"/>
+		<Label x:Name="Tiles28MF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="376,326,0,0" Width="82" MouseDown="Tiles28MF_MouseDown"/>
+		<Label x:Name="Tiles28CF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="463,326,0,0" Width="82" MouseDown="Tiles28CF_MouseDown"/>
 
-		<Label x:Name="Tiles19hMT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="202,389,0,0" Width="82"/>
-		<Label x:Name="Tiles19hCT" Content="1組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="289,389,0,0" Width="82"/>
-		<Label x:Name="Tiles19hMF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="376,389,0,0" Width="82"/>
-		<Label x:Name="Tiles19hCF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="463,389,0,0" Width="82"/>
+		<Label x:Name="Tiles19hMT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="202,389,0,0" Width="82" MouseDown="Tiles19hMT_MouseDown"/>
+		<Label x:Name="Tiles19hCT" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="289,389,0,0" Width="82" MouseDown="Tiles19hCT_MouseDown"/>
+		<Label x:Name="Tiles19hMF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="376,389,0,0" Width="82" MouseDown="Tiles19hMF_MouseDown"/>
+		<Label x:Name="Tiles19hCF" Content="0組" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="36" Margin="463,389,0,0" Width="82" MouseDown="Tiles19hCF_MouseDown"/>
 		<Label Content="組の表示をタップで+1&#10;ロングタップでリセット" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,279,0,0"/>
 
 
 		<Label Content="頭" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="30,462,0,0"/>
-		<Button Content="役牌" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="126,465,0,0" FontSize="36" Background="Gray"/>
-		<Button Content="連風牌" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="251,465,0,0" FontSize="36"/>
+		<Button x:Name="Head_IsSlum" Content="役牌" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="126,465,0,0" FontSize="36" Click="Head_IsSlum_Click"/>
+		<Button x:Name="Head_IsDoubleWindTile" Content="連風牌" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="251,465,0,0" FontSize="36" Click="Head_IsDoubleWindTile_Click"/>
 
 		<Label Content="待ち" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="30,529,0,0"/>
-		<Button Content="両面・シャボ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="126,532,0,0" FontSize="36"/>
+		<Button x:Name="Wait_Is2Gates" Content="両面・シャボ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="126,532,0,0" FontSize="36" Click="Wait_Is2Gates_Click"/>
 
 
 		<Label x:Name="LogLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="721,12,0,0" Height="589" Width="541" FontSize="28"/>
-		
-		<Button x:Name="ResetButton" Content="リセット" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="721,616,0,0" FontSize="36" Click="ResetButton_Click"/>
 
+		<Label Name="ResultPoint" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,594,0,0" FontSize="60"/>
+
+		<Label Name="SlumDisplay" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalAlignment="Top" FontSize="56" Margin="359,528,0,0" Width="291" Foreground="Red" RenderTransformOrigin="0.5,0.5">
+			<Label.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-14.534"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Label.RenderTransform>
+		</Label>
+
+		<Button x:Name="ResetButton" Content="リセット" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="982,616,0,0" FontSize="36" Click="ResetButton_Click"/>
+		<Label x:Name="ResultPoint_Leader" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="667,598,0,0" FontSize="30"/>
+		<Label x:Name="ResultPoint_NonLeader" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="667,634,0,0" FontSize="30"/>
+
+
+		<Button x:Name="Run" Content="計算！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="71,616,0,0" FontSize="36" Click="Run_Click"/>
 
 
 	</Grid>
