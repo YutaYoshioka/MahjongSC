@@ -434,7 +434,8 @@ namespace MahjongSC_for_Windows
 		/// <param name="e"></param>
 		private void IsAllSequenceHand_Click(object sender, RoutedEventArgs e)
 		{
-
+			isAllSequenceHand = true;
+			Run_Click(null, null);
 		}
 
 		/// <summary>
@@ -444,7 +445,8 @@ namespace MahjongSC_for_Windows
 		/// <param name="e"></param>
 		private void IsSevenPairs_Click(object sender, RoutedEventArgs e)
 		{
-
+			isSevenPairs = true;
+			Run_Click(null, null);
 		}
 
 		/// <summary>
